@@ -1,0 +1,21 @@
+name: default
+title: InSpec Profile for AWS EC2
+maintainer: Akshay Pk - Senior Cloud Engineer
+license: Copyrights Zeros Initative, all rights reserved
+summary: An InSpec Compliance Profile
+version: 0.1.0
+inspec_version: '>= 4.22.1'
+attributes:
+- name: aws_instance_id  
+  required: true
+  description: 'The AWS Instance ID'
+  type: String
+- name: aws_instance_ami_id  
+  required: true
+  description: 'The AWS Instance AMI ID'
+  type: String  
+depends:
+  - name: inspec-aws
+    url: https://github.com/inspec/inspec-aws/archive/v1.29.4.tar.gz
+supports:
+  - platform: aws
